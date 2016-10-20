@@ -1,2 +1,3 @@
-https://bncbodrogi.github.io
-https://github.com/greenfox-zerda-raptors/bncbodrogi
+https://bncbodrogi.github.io ("trial website")
+https://github.com/greenfox-zerda-raptors/bncbodrogi ("raptor profile")
+https://github.com/bncbodrogi ("profile")
