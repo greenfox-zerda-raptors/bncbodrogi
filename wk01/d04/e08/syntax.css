@@ -1,0 +1,35 @@
+h1 {
+  color: black;
+}
+article {
+  font-size: 18px;
+  width: 300px;
+  margin: 15px;
+}
+
+p {
+  border-style: solid;
+  border-width: 2px;
+  padding-left: 20px;
+  margin-top: 5px;
+  padding: 40px;
+  background-repeat: no-repeat;
+  background-image: url("duck.png")
+}
+
+.left {
+  background-position: left;
+}
+
+.mid {
+  background-position: center;
+}
+
+.right{
+  background-position: bottom right;
+}
+
+p:hover {
+  background-image: url("images.jpg");
+  background-position: center;
+}

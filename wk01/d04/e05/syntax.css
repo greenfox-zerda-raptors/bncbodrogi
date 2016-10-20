@@ -1,0 +1,26 @@
+h1 {
+  color: blue;
+}
+
+h2 {
+  color: orange;
+
+}
+
+.nested {
+  font-weight: normal;
+  color: blue;
+  list-style-type: square;;
+}
+ul {
+  color: black;
+  list-style-type:disc
+}
+
+ol {
+  color: black;
+}
+
+.red {
+  color: red;
+}

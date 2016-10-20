@@ -1,0 +1,26 @@
+h1 {
+  color: black;
+}
+article {
+  font-size: 18px;
+  width: 300px;
+  margin: 15px;
+}
+
+p {
+  border-left-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-width: 2px;
+  padding-left: 20px;
+  margin:0;
+  padding: 20px;
+}
+
+p:hover {
+  background-color: red;
+}
+
+.openb {
+  border-bottom-style: none;
+}
