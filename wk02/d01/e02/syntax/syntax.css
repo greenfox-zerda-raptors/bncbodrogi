@@ -1,0 +1,73 @@
+
+body{
+  background: white;
+}
+
+.wrapper{
+  width: 600px;
+  margin: 0 auto;
+}
+
+.flex-container{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+  height: 500px;
+  justify-content: center;
+}
+
+.row{
+  height: 100px;
+  width: 100%;
+}
+
+.column{
+  height: 100%;
+  width: 120px;
+}
+
+.cyan {
+  background: cyan;
+  width: 100%;
+}
+
+.blue {
+  background: blue;
+  float: bottom;
+  width: 100%;
+}
+
+.orange{
+  background: orange;
+  order: 0;
+  margin-right: 3%;
+}
+.red{
+  background: red;
+  order: 1;
+  width: 60%;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.purple{
+  background: purple;
+  order: 2;
+  margin-left: 3%;
+}
+
+.box {
+  height: 30px;
+  width: 30px;
+}
+
+.black{
+  background: black;
+  position:absolute;
+  z-index: 1;
+  border-bottom: 10px solid red;
+  border-right: 10px solid red;
+}

@@ -1,0 +1,79 @@
+
+body{
+  width: 100%
+  background: white;
+  margin: 0;
+}
+
+aside {
+  min-width: 120px;
+
+}
+.wrapper{
+  width: 100%;
+  margin: 0 0;
+}
+
+.flex-container{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row;
+  height: 500px;
+  justify-content: space-between;;
+}
+
+.row{
+  height: 100px;
+  width: 100%;
+}
+
+.column{
+  height: 100%;
+}
+
+
+.cyan {
+  background: cyan;
+  width: 100%;
+}
+
+.blue {
+  background: blue;
+  float: bottom;
+  width: 100%;
+}
+
+.orange{
+  background: orange;
+  order: 0;
+  margin-right: 2%;
+}
+.red{
+  background: red;
+  order: 1;
+  width: 75%;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.purple{
+  background: purple;
+  order: 2;
+  margin-left: 2%;
+}
+
+.box {
+  height: 30px;
+  width: 30px;
+}
+
+.black{
+  background: black;
+  position:absolute;
+  z-index: 1;
+  border-bottom: 10px solid red;
+  border-right: 10px solid red;
+}

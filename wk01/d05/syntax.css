@@ -1,55 +1,60 @@
 @font-face {
-    /* font from https://dafont.com/new.php */
-    font-family: "woodcutter";
-    src: url(woodcutter.ttf);
+  /* font from https://dafont.com/new.php */
+  font-family: woodcutter;
+  src: url(./fonts/woodcutter.ttf);
 }
 
-/* mainly responsible for the background image */
 header {
+  width: 80%;
+  height: 350px;
   margin: 0 auto;
-  width: 950px;
-  height: 320px;
-  background-repeat:no-repeat;
+  position: relative;
+  line-height: 40px;
+}
+
+.banner-img {
+  width: 100%;
+  height: 350px;
+  position: absolute;;
+  background-image: url(./imgs/topbg.jpg);
+  background-repeat: no-repeat;
   background-size: 100%;
-  /*img. to be replaced */
-  /* opacity pre set at https://pixlr.com  */
-  background-image: url("topbg.jpg");
-  }
+  opacity: .8;
+}
 
-/* short text bfore name */
-.Intro {
-  font-family: "woodcutter";
-  font-size: 30px;
+.banner-text {
+  font-family:"woodcutter";
+  font-size:40px;
+  left: 20%;
+  top: 70%;
   color: black;
-  opacity: 0.9;
-  padding-top: 200px;
-  padding-left: 200px;
-  }
+  position: relative;
+  margin: 0 auto;
+}
 
-/* name */
-.IntroName {
-  font-family: "woodcutter";
+.name {
   font-size: 60px;
-  color: black;
+}
+
+article {
+  width: 60%;
+  font-family:monospace;
+  margin: 30px auto;
 }
 
 /* main skills in plain text and short list  */
 h1 {
-  font-family:monospace;
   font-size: 15px;
   font-weight: 200;
   margin:30px auto;
-  width: 600px;
 }
 
 /* only used for the first, main list */
-.MainList {
-  font-family:monospace;
+.main-list {
   font-weight: 200;
   margin: auto;
   padding-left: 90px;
   padding-top: 15px;
-  width: 600px;
   list-style-type: square;
 }
 
@@ -57,49 +62,42 @@ h1 {
 qoute to summarise the section below
 background shold be done as a picture
 with a qoutatinmark in the top left corner */
-.SectionHeader{
+.section-header{
   font-family:"woodcutter";
   font-size:40px;
   color: white;
   background-color: black;
+  width: 600px;
   margin: 30px auto;
   padding:30px;
-  width: 600px;
 }
 
 /* sub heading explaining the qoute */
 h2{
-  font-family:monospace;
   font-weight: bold;
   font-size: 30px;
   margin:50px auto;
-  width: 600px;
 
 }
 
 /* sub section heading */
 h3{
-  font-family:monospace;
   font-weight: bolder;
   font-size: 20px;
   margin:40px auto;
-  width: 600px;
 }
 
+/* not ready yet */
 h4{
-  font-family:monospace;
   font-weight: bolder;
   font-style: italic;
   font-size: 20px;
   margin: auto;
-  width: 600px;
 }
 
 /* plain text to explain sub sections */
 p {
-font-family:monospace;
-font-size: 15px;
-font-weight: 200;
-margin:30px auto;
-width: 600px;
+  font-size: 15px;
+  font-weight: 200;
+  margin:30px auto;
 }

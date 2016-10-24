@@ -1,0 +1,31 @@
+h1 {
+  color: black;
+}
+.wrapper {
+  background: white;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.wrapper:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+p {
+  justify-content: center;
+  font-size: 18px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid black;
+}
+
+.duck-left {
+float: left;
+margin: 10px;
+}
+
+.duck-right {
+float: right;
+margin: 10px;
+}
