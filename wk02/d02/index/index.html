@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../syntax/syntax.css">
+  <title>Form1</title>
+</head>
+<body>
+
+  <form class="myForm" method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm">
+
+<div class="wrapper">
+
+    <h1>
+      Profil
+    </h1>
+
+  <div class="flexbox_1">
+
+    <div class="flexbox_1_right">
+
+      <div class="c_title">
+        Kapcsolat
+      </div>
+
+      <div class="phone title">
+        <label>Telefonszám<span style="color:red;">*</span><label>
+          <input type="tel" name="phone_number" placeholder="+36 -- --- ----">
+      </div>
+
+      <div class="email title">
+        <label>E-mail fiók<span style="color:red;">*</span></label>
+          <input type="email" name="email_address" placeholder="nev@domain.hu">
+      </div>
+
+      <div class="facebook title">
+        <label>Facebook profil</label>
+          <input type="url" name="facebook_profile"
+          placeholder="http://facebook.com/...">
+      </div>
+
+      <div class="twitter title">
+        <label>Twitter profil</label>
+          <input type="url" name="twitter_profile"
+          placeholder="http://twatter.com/...">
+      </div>
+
+      <div class="house title">
+        <label>Milyen házban laksz?</label>
+          <select id="house" name="house">
+            <option value="" selected="selected">Válassz</option>
+            <option value="house" >Ház</option>
+            <option value="flat" >Lakás</option>
+            <option value="twinhouse" >Ikerház</option>
+          </select>
+      </div>
+
+    </div>
+
+    <div class="flexbox_1_left">
+
+      <div class="c_title">
+        Személyes adatok
+      </div>
+
+      <div class="name">
+        <label>Név<span style="color:red;">*</span></label>
+          <input type="text" name="customer_name" required>
+      </div>
+
+      <div class="birth_gender">
+
+        <div class="yob">
+          <p><label>Születési éved</label></p>
+            <input type="number" name="year_of_birth" placeholder=" pl 1984">
+        </div>
+
+        <div class="gender">
+            <p><label>Nemed</label></p>
+              <input type="radio" name="gender" value="female"> Nő
+              <input type="radio" name="gender" value="male"> Férfi
+        </div>
+      </div>
+
+
+      <div class="choice title">
+      <label >Milyen márkát szeretsz?</label>
+          <div class="brand">
+            <div class="brand_left">
+              <p><input type="checkbox" name="brand1" value="brand1">Adidas</p>
+              <p><input type="checkbox" name="brand2" value="brand2">Apple</p>
+              <p><input type="checkbox" name="brand2" value="brand2">Coke</p>
+              <p><input type="checkbox" name="brand2" value="brand2">Mazda</p>
+              <p><input type="checkbox" name="brand2" value="brand2">Nike</p>
+            </div>
+            <div class="brand_right">
+              <p><input type="checkbox" name="brand1" value="brand1">Opel</p>
+              <p><input type="checkbox" name="brand2" value="brand2">Gayban</p>
+              <p><input type="checkbox" name="brand2" value="brand2">Starsucks</p>
+              <p><input type="checkbox" name="brand2" value="brand2">Tesla</p>
+              <p><input type="checkbox" name="brand2" value="brand2">Yahoo</p>
+            </div>
+          </div>
+          <span style="color:RGBA(159, 156, 152, 1.00);">Többet is választhatsz!</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="flexbox_2">
+
+    <div class="introduction">
+      <label>Bemutatkozás<span style="color:red;">*</span>
+        <textarea name="comments" maxlength="500" placeholder="Írj magadról pár mondatot!"></textarea>
+      </label>
+    </div>
+  </div>
+
+  <div class="flexbox_3">
+
+    <div class="cv">
+      <label><p>CV feltöltése</p></label>
+        <input type="file" name="file" id="file">
+        <label for="file" class="upload">FILE KIVÁLASZTÁSA</label>
+    </div>
+
+    <div class="consent">
+      <input type="checkbox" name="consent" value="consent">
+      <label>Elfogadom a</label>
+      <a href="http://www.somewebpa.ge">felhasználási feltételeket</a>
+    </div>
+
+    <div class="bottom_b">
+
+      <div class="submit">
+        <button type="submit" value="Submit">MENTÉS</button>
+      </div>
+
+      <div class="reset">
+        <button type="reset" value="Reset">ŰRLAP TÖRLÉSE</button>
+      </div>
+    </div>
+  </div>
+
+
+</form>
+
+</body>
+</html>
