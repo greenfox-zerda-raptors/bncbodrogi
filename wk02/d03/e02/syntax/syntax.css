@@ -1,0 +1,61 @@
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background: #60ff11;
+  background: -webkit-linear-gradient(left top, #60ff11, #a040f9);
+  background: -webkit-linear-gradient(left top, #60ff11, #a040f9);
+  background: -webkit-linear-gradient(left top, #60ff11, #a040f9);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.green:hover {
+  font-size: 35px;
+  padding: 100px;
+  width: 400px;
+}
+
+.blue {
+  background: #a040f9;
+  background: -webkit-linear-gradient(top, #a040f9, #f7186e);
+  background: -webkit-linear-gradient(top, #a040f9, #f7186e);
+  background: -webkit-linear-gradient(top, #a040f9, #f7186e);
+}
+
+.blue:hover {
+  width: 100px;
+}
+
+.red {
+  background: #fc0000;
+  background: -webkit-linear-gradient(right, #f7186e, #fc0000);
+  background: -webkit-linear-gradient(right, #f7186e, #fc0000);
+  background: -webkit-linear-gradient(right, #f7186e, #fc0000);
+}
+}
+
+.red span:after {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.red:hover span {
+  padding-right: 40px;
+}
