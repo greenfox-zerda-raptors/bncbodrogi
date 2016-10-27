@@ -1,0 +1,99 @@
+.topbox {
+  display: flex;
+  flex-flow: column;
+}
+
+.login {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wrapper_nav {
+  width: 100%;
+  margin: 0 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul, .login ul {
+  list-style-type: none;
+  text-align: center;
+  display: flex;
+  padding: 10px 10px 0px 10px;
+  margin: 0px;
+}
+
+.login a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #04439b;
+  padding: 5px;
+  display: block;
+  margin: 0px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 14px;
+  border: 1px solid transparent;
+  -moz-border-image: -moz-linear-gradient(top, #fff 0%, #04439b 100%);
+  -webkit-border-image: -webkit-linear-gradient(top, #fff 0%, #04439b 100%);
+  border-image: linear-gradient(to bottom, #fff 0%, #04439b 100%);
+  border-image-slice: 1;
+  border-top: none;
+  padding: 10px 5px 0px 5px;
+  color: #04439b;
+  display: block;
+
+}
+
+.search {
+  margin: 0px 0px 0px 10px;
+  padding: 4px 10px;
+  font-size: 10px;
+}
+
+li:first-child a {
+  border-right: none;
+}
+
+ul:last-child li:nth-child(3) a {
+  border-left: none;
+}
+
+nav a:focus {
+  color: black;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-border-image: -webkit-gradient(linear, 0 100%, 0 0, from(#04439b), to(#fff)) 1 100%;
+  -webkit-border-image: -webkit-linear-gradient(bottom,#04439b, #fff) 1 100%;
+  -moz-border-image: -moz-linear-gradient(bottom, #04439b, #fff) 1 100%;
+  -o-border-image: -o-linear-gradient(bottom, #04439b, #fff) 1 100%;
+  border-image: linear-gradient(to top, #04439b, #fff) 1 100%;
+  background-color: #fff;
+  border-bottom: none;
+}
+
+li:first-child a:focus {
+  border-right: none;
+}
+
+ul:last-child li:nth-child(3) a:focus {
+  border-left: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #04439b;
+}
+
+header {
+  background: #eee;
+  background: -webkit-linear-gradient(#fff, #eee);
+  background: -o-linear-gradient((#fff, #eee);
+  background: -moz-linear-gradient(#fff, #eee);
+  background: linear-gradient((#fff, #eee);
+}
