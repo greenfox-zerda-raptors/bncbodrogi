@@ -1,0 +1,29 @@
+body {
+  width: 100%;
+  margin: 0 auto;
+  background: white;
+}
+
+.container {
+  display: flex;
+}
+
+.container ul li {
+  color: red;
+  background-color: yellow;
+  width: 200px;
+  height: 80px;
+  border: 2px solid black;
+  text-indent: 10%;
+  line-height: 250%;
+  font-size: 30px;
+}
+
+.container ul li:nth-child(2) {
+  border-top: none;
+  border-bottom: none;
+}
+
+.container ul {
+  list-style: none;
+}
