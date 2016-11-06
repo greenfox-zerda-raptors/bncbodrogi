@@ -7,3 +7,5 @@ public class ws07 {
         System.out.println(g1 - g2 >= 0);
     }
 }
+
+

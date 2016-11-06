@@ -4,7 +4,7 @@ public class challenge2 {
 
         //Loop printing out prime numbers from 2 to 100
 
-        int i=100;
+        int i=10000;
 
         while (i != 1){
             int y = i - 1;
