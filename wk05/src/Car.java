@@ -5,11 +5,16 @@ public class Car {
     private String typeCar;
     private String color;
 
+    private static int counter = -1;
+
+
+
     public Car () {
         engine = 1100;
         kmOdometer = 112300;
         typeCar = "Mazda";
         color = "red";
+        counter++;
     }
 
     public Car(int engine, int kmOdometer, String typeCar, String color){
@@ -17,6 +22,7 @@ public class Car {
         this.kmOdometer = kmOdometer;
         this.typeCar = typeCar;
         this.color = color;
+        counter++;
     }
 
     public Car(int engine, int kmOdometer) {
@@ -24,6 +30,7 @@ public class Car {
         this.kmOdometer = kmOdometer;
         color = "red";
         typeCar = "Mazda";
+        counter++;
     }
 
     public Car(String color, String typeCar) {
@@ -31,6 +38,7 @@ public class Car {
         this.typeCar = typeCar;
         kmOdometer = 1600;
         engine = 10;
+        counter++;
     }
 
     public Car(String color, String typeCar, int engine) {
@@ -38,6 +46,7 @@ public class Car {
         this.typeCar = typeCar;
         this.engine = engine;
         kmOdometer = 10000;
+        counter++;
     }
 
     public String toString (){
@@ -46,11 +55,6 @@ public class Car {
 
     }
 
-    public int getCount (){
-        int n;
-
-        return n;
-    }
 
     public void drive (int distance) {
         setKmOdometer(kmOdometer + distance);
@@ -61,6 +65,10 @@ public class Car {
         }else {
             System.out.println("whee, " + typeCar + " " + distance + ", the odometer now shows: " + kmOdometer);
         }
+    }
+
+    public static int getCount (){
+        return counter;
     }
 
     public void setColor(String color) {
