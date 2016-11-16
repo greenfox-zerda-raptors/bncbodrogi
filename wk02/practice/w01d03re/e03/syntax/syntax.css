@@ -1,0 +1,38 @@
+
+.container {
+  width: 30%;
+  max-width: 200px;
+  display: flex;
+  flex-flow: column;
+}
+
+.container ul li {
+  color: blue;
+  background-color: yellow;
+  height: 80px;
+  border: 2px solid black;
+  text-indent: 5%;
+  line-height: 250%;
+  font-size: 30px;
+}
+
+
+.container ul li:nth-child(2) {
+  border-top: none;
+  border-bottom: none;
+}
+
+.container ul {
+  list-style: none;
+}
+
+.container ul:nth-child(2) li {
+  color: red;
+  background-color: cyan;
+}
+
+ul {
+  border: 10px green solid;
+  margin: 3px 0;
+  padding: 0;
+}

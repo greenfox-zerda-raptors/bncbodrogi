@@ -5,6 +5,10 @@ body {
   justify-content: flex-end;
 }
 
+.container {
+  display: flex;
+  flex-flow: column;
+}
 
 header {
   width: 100%;
@@ -14,9 +18,9 @@ header {
   display: flex;
   flex-flow: column;
   background: #eee;
-  background: -webkit-linear-gradient(#fff, #eee);
-  background: -o-linear-gradient(#fff, #eee);
-  background: -moz-linear-gradient(#fff, #eee);
+  background: -webkit-linear-gradient(#fff, #eee 120px);
+  background: -o-linear-gradient(#fff, #eee 120px);
+  background: -moz-linear-gradient(#fff, #eee 120px );
   background: linear-gradient(#fff, #eee 120px);
 }
 
@@ -49,16 +53,16 @@ nav ul, .login ul {
   color: #0645ad;
   padding: 5px;
   display: block;
-  margin: 0px;
+  margin: 0;
 }
 
 nav a {
   text-decoration: none;
   font-size: 14px;
   border: 1px solid transparent;
-  -moz-border-image: -moz-linear-gradient(top, #fff 0%, #a7d7f9 100%);
-  -webkit-border-image: -webkit-linear-gradient(top, #fff 0%, #a7d7f9 100%);
-  border-image: linear-gradient(to bottom, #fff 0%, #a7d7f9 100%);
+  -moz-border-image: -moz-linear-gradient(top, #fff, #a7d7f9);
+  -webkit-border-image: -webkit-linear-gradient(#fff, #a7d7f9);
+  border-image: linear-gradient(#fff , #a7d7f9);
   border-image-slice: 1;
   border-top: none;
   padding: 10px 5px 0px 5px;
@@ -68,7 +72,7 @@ nav a {
 }
 
 .search {
-  margin: 0px 0px 0px 10px;
+  margin: 0 0 0 10px;
   padding: 4px 10px;
   font-size: 10px;
 }
@@ -109,7 +113,7 @@ nav a:hover {
 }
 
 .sidebox {
-  width: 135px;
+  width: 150px;
   display: flex;
   flex-flow: column;
   align-content: flex-start;
@@ -126,7 +130,29 @@ nav a:hover {
   list-style-type: none;
   background: #eee;
   margin: 0;
-  padding: 0;
+  padding: 5px;
+}
+
+.sidebox ul a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #0645ad;
+}
+
+.sidebox ul a:hover {
+  text-decoration: underline;
+}
+
+.sidebox > ul > li a, .main_page li:first-child a:first-child {
+  color: #4d4d4d;
+}
+
+
+.sidebox hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background-image: linear-gradient(to right, #eee, #d8d8d8, #eee);
 }
 
 .sidebox img {
@@ -134,4 +160,8 @@ nav a:hover {
   background: -o-linear-gradient(#fff, #eee 80px);
   background: -moz-linear-gradient(#fff, #eee 80px);
   background: linear-gradient(#fff, #eee 80px);
+}
+
+#marge {
+  float: right;
 }
