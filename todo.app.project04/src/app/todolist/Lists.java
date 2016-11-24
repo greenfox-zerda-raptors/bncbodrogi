@@ -59,7 +59,11 @@ public class Lists {
                 getTodoList(todoList);
             }else if(userInput.substring(0, userInput.length()).contains("remove") || userInput.substring(0, 1).contains("r")) {
                 System.out.println("Enter the number of the task you wish to remove:");
-                todoList.remove(Integer.parseInt(UserInput.getUserInput()));
+                todoList.remove(Integer.parseInt(UserInput.getUserInput())-1);
+                Task.counter--;
+                for (int i = 0; i < todoList.size(); i++){
+                    todoList.get(i).setLineNumber(i+1);
+                }
             }else if(userInput.substring(0, userInput.length()).contains("complete") || userInput.substring(0, 1).contains("c")) {
                 System.out.println("Enter the number of the task you wish to mark as complete:");
                 todoList.get(Integer.parseInt(UserInput.getUserInput())-1).setDone();
