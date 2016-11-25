@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.geom.CubicCurve2D;
+import java.util.ArrayList;
+import java.util.Random;
 
 public class ImagePanel extends JPanel {
 
@@ -17,12 +18,19 @@ public class ImagePanel extends JPanel {
         requestFocus();
         graphics.drawImage(image, 0, 0, this);
 
+        Random dimensions = new Random();
 
-        String color = RandomHexColor.generateHexColor();
-        graphics.setColor(Color.decode(color));
-        int xpoints[] = {25, 75, 125, 85, 125, 75, 25, 65, 25};
-        int ypoints[] = {50, 90, 50, 100, 150, 110, 150, 100, 50};
-        graphics.fillPolygon(xpoints, ypoints, 9);
+        ArrayList<RandomizableShape> AllShapesAndSizes = new ArrayList<>();
+
+        for(int i = 0; i < (3 + dimensions.nextInt(17)); i++){
+            AllShapesAndSizes.add(i, new RandomizableShape());
+        }
+
+        for(RandomizableShape item : AllShapesAndSizes){
+            graphics.setColor(Color.decode(RandomHexColor.generateHexColor()));
+            graphics.fillPolygon(item.xPoints, item.yPoints, item.numberOfPoints);
+        }
+
 
     }
 }
