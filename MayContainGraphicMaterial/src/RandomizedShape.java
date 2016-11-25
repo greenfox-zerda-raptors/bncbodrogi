@@ -1,9 +1,7 @@
-import java.awt.*;
-import java.awt.image.ImageObserver;
-import java.text.AttributedCharacterIterator;
+
 import java.util.Random;
 
-public class RandomizableShape {
+public class RandomizedShape {
 
     private String hexColor;
     int[] xPoints;
@@ -11,7 +9,7 @@ public class RandomizableShape {
     int numberOfPoints;
     private Random randomNum;
 
-    public RandomizableShape() {
+    public RandomizedShape() {
         randomNum = new Random();
         numberOfPoints = randomNum.nextInt(20);
         xPoints = new int[numberOfPoints];
@@ -29,7 +27,8 @@ public class RandomizableShape {
 
     }
 
-    public RandomizableShape(int complexity, int possibleWidth, int possibleHeigth) {
+
+    public RandomizedShape(int complexity, int possibleWidth, int possibleHeigth) {
 
         randomNum = new Random();
         numberOfPoints = randomNum.nextInt(complexity);

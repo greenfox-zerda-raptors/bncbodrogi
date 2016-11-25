@@ -20,13 +20,13 @@ public class ImagePanel extends JPanel {
 
         Random dimensions = new Random();
 
-        ArrayList<RandomizableShape> AllShapesAndSizes = new ArrayList<>();
+        ArrayList<RandomizedShape> AllShapesAndSizes = new ArrayList<>();
 
         for(int i = 0; i < (3 + dimensions.nextInt(17)); i++){
-            AllShapesAndSizes.add(i, new RandomizableShape());
+            AllShapesAndSizes.add(i, new RandomizedShape(dimensions.nextInt(100), 400 + dimensions.nextInt(400), 300 + dimensions.nextInt(300)));
         }
 
-        for(RandomizableShape item : AllShapesAndSizes){
+        for(RandomizedShape item : AllShapesAndSizes){
             graphics.setColor(Color.decode(RandomHexColor.generateHexColor()));
             graphics.fillPolygon(item.xPoints, item.yPoints, item.numberOfPoints);
         }
