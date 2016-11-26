@@ -20,18 +20,8 @@ public class RandomHexColor {
         for(int element : elementBlock){
             if(element < 10){
                 conversionAssistant.append(String.valueOf(element));
-            }else if(element == 10){
-                conversionAssistant.append(String.valueOf("a"));
-            }else if(element == 11) {
-                conversionAssistant.append(String.valueOf("b"));
-            }else if(element == 12) {
-                conversionAssistant.append(String.valueOf("c"));
-            }else if(element == 13) {
-                conversionAssistant.append(String.valueOf("d"));
-            }else if(element == 14) {
-                conversionAssistant.append(String.valueOf("e"));
-            }else if(element == 15) {
-                conversionAssistant.append(String.valueOf("f"));
+            }else{
+                conversionAssistant.append((char) (87 + element) );
             }
         }
         hexColor = conversionAssistant.toString();
