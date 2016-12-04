@@ -42,6 +42,7 @@ public class Wrapper extends JFrame implements ActionListener {
         container.add(menuBar);
 
         menu = new JMenu();
+        menuBar.setSize(500,20);
         menuBar.add(menu);
 
         itemExit = new JMenuItem();
