@@ -3,6 +3,7 @@ package date;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -24,26 +25,39 @@ public final class BirthdayWithJavaUtilDate implements BirthdayCalculator<Date> 
     @Override
     public String printMonthAndDay(Date date) {
         // TODO - return the date formatted: month & day (MM. dd.)
-        
 
-        return String.format();
+        DateFormat df = new SimpleDateFormat("MM. dd.");
+        String monthAndDay = df.format(date);
+
+        return monthAndDay;
     }
 
     @Override
     public boolean isAnniversaryToday(Date date) {
         // TODO - return with true if today is the same month+day as date
-        return false;
+
+        Date today = Calendar.getInstance().getTime();
+        if (date.compareTo(today) == 0){
+            return true;
+        }else {
+            return false;
+        }
     }
 
     @Override
     public int calculateAgeInYears(Date birthday) {
         // TODO - return how many years age the input date 'birthday' was
-        return -1;
+
+        int ageInYears = (int) (Integer.valueOf(Calendar.getInstance().getTime().toString()) - birthday.getTime());
+
+        return ageInYears;
     }
 
     @Override
     public int calculateDaysToNextAnniversary(Date date) {
         // TODO - the number of days remaining to the next anniversary of 'date' (e.g. if tomorrow, return 1)
+
+
         return -1;
     }
 
