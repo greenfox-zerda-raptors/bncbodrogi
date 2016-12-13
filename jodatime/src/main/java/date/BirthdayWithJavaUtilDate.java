@@ -5,6 +5,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 public final class BirthdayWithJavaUtilDate implements BirthdayCalculator<Date> {
@@ -36,8 +37,10 @@ public final class BirthdayWithJavaUtilDate implements BirthdayCalculator<Date> 
     public boolean isAnniversaryToday(Date date) {
         // TODO - return with true if today is the same month+day as date
 
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         Date today = Calendar.getInstance().getTime();
-        if (date.compareTo(today) == 0){
+
+        if (df.format(date).toString().substring(5, 10).equals(df.format(today).toString().substring(5, 10))){
             return true;
         }else {
             return false;
@@ -48,8 +51,16 @@ public final class BirthdayWithJavaUtilDate implements BirthdayCalculator<Date> 
     public int calculateAgeInYears(Date birthday) {
         // TODO - return how many years age the input date 'birthday' was
 
-        int ageInYears = (int) (Integer.valueOf(Calendar.getInstance().getTime().toString()) - birthday.getTime());
+        DateFormat df = new SimpleDateFormat("yyyyMMdd");
+        String currentYear = df.format(Calendar.getInstance().getTime());
+        String birthdayYear = df.format(birthday);
 
+        int ageInYears = 0;
+        if(Integer.valueOf(currentYear.substring(4, 8)) >= Integer.valueOf(birthdayYear.substring(4, 8))){
+
+            ageInYears = (Integer.valueOf(currentYear.substring(0, 4)) - Integer.valueOf(birthdayYear.substring(0, 4)));
+
+        }
         return ageInYears;
     }
 
@@ -57,8 +68,32 @@ public final class BirthdayWithJavaUtilDate implements BirthdayCalculator<Date> 
     public int calculateDaysToNextAnniversary(Date date) {
         // TODO - the number of days remaining to the next anniversary of 'date' (e.g. if tomorrow, return 1)
 
+        GregorianCalendar today = new GregorianCalendar();
+        Calendar birthday = Calendar.getInstance();
+        birthday.setTime(date);
 
-        return -1;
+
+        System.out.println(today.get(Calendar.DAY_OF_YEAR));
+        System.out.println(birthday.get(Calendar.DAY_OF_YEAR));
+
+        int day;
+
+        if (today.get(Calendar.YEAR) % 4 == 0) {
+            if (birthday.get(Calendar.DAY_OF_YEAR) > today.get(Calendar.DAY_OF_YEAR)) {
+                day = birthday.get(Calendar.DAY_OF_YEAR) - today.get(Calendar.DAY_OF_YEAR) -1;
+            } else {
+                day = (birthday.get(Calendar.DAY_OF_YEAR) + (365 - today.get(Calendar.DAY_OF_YEAR)) -1);
+
+            }
+        }else{
+            if (birthday.get(Calendar.DAY_OF_YEAR) > today.get(Calendar.DAY_OF_YEAR)) {
+                day = birthday.get(Calendar.DAY_OF_YEAR) - today.get(Calendar.DAY_OF_YEAR);
+            } else {
+                day = (birthday.get(Calendar.DAY_OF_YEAR) + (365 - today.get(Calendar.DAY_OF_YEAR)));
+            }
+        }
+
+        return day;
     }
 
     public static void main(String[] args) {
