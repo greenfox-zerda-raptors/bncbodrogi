@@ -1,33 +1,53 @@
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
-import lombok.*;
 
+import java.util.ArrayList;
 
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
 @DatabaseTable
-public class Todo {
-    @DatabaseField
-    @Setter
+class Todo {
+
+    @DatabaseField(id = true)
     private String name;
     @DatabaseField
-    @Setter
+    private String date;
+    @DatabaseField
     private boolean isDone;
-    @DatabaseField(generatedId = true)
-    private Integer id;
 
-    public Todo (String name){
+    Todo(){
+    }
+
+    Todo (String date, String name){
         this.name = name;
+        this.date = date;
         isDone = false;
+    }
+
+    String getDate(){
+        return this.date;
+    }
+
+    String getName(){
+        return this.name;
     }
 
     public String toString() {
 
         if (isDone) {
-            return "[X] " + this.name;
+            return "[X] " + this.name + " due on:   " + this.date + "\n";
         } else {
-            return "[X] " + this.name;
+            return "[ ] " + this.name + " due on:   " + this.date + "\n";
         }
+    }
+
+    void setDone(boolean done) {
+        isDone = done;
+    }
+
+    public static ArrayList createTodoList(String date, String ... todos){
+        ArrayList<Todo> todoList = new ArrayList<>();
+        for(String todo : todos){
+            todoList.add(new Todo(date, todo));
+        }
+        return todoList;
     }
 }
