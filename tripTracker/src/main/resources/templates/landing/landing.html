@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <link rel="stylesheet" type="text/css" href="../templates/landing/style.css"/>
+    <title>TripTracker: Login</title>
+</head>
+<body>
+
+<form class="myForm" method="get" enctype="application/x-www-form-urlencoded"
+      action="/html/codes/html_form_handler.cfm">
+
+    <div class="wrapper">
+
+        <h1>
+            Regisztráció
+        </h1>
+
+        <div class="flexbox_1">
+
+            <div class="name">
+                <label>Név</label>
+                <input type="text" name="customer_name"/>
+            </div>
+
+            <div class="birth_gender">
+
+                <div class="yob">
+                    <p><label>Születési év</label></p>
+                    <input type="number" name="year_of_birth" placeholder=" pl 1984"/>
+                </div>
+
+                <div class="gender">
+                    <input type="radio" name="gender" value="female"/><label>Nő</label>
+                    <input type="radio" name="gender" value="male"/><label>Férfi</label>
+                </div>
+            </div>
+
+            <div class="phone title">
+                <label>Telefonszám</label>
+                <input type="tel" name="phone_number" placeholder="+36 -- --- ----"/>
+            </div>
+
+            <div class="email title">
+                <label>E-mail fiók</label>
+                <input type="email" name="email_address" placeholder="nev@domain.hu"/>
+            </div>
+
+
+            <div class="bottom_b">
+
+                <div class="submit">
+                    <button type="submit" value="Submit">Mentés</button>
+                </div>
+
+                <div class="reset">
+                    <button type="reset" value="Reset">Visszaállítás</button>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</form>
+
+</body>
+</html>
