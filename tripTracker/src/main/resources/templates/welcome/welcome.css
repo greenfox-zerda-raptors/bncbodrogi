@@ -1,0 +1,30 @@
+header {
+    background: RGBA(0, 0, 0, 0.6);
+    color: RGBA(211, 236, 255, 0.6);
+    width: 90%;
+    border-radius: 5px;
+    margin: 0 5% 0 5%;
+}
+
+body {
+    background-image: url("landingbg.jpg");
+    background-repeat: no-repeat;
+}
+
+p {
+    font-family: 'Arvo', serif;
+    color: RGBA(211, 236, 255, 1);
+    padding: 3px 0 3px 10px;
+}
+
+.wrapper {
+    background: RGBA(211, 236, 255, 0.7);
+    width: 90%;
+    height: 600px;
+    margin: 2% auto;
+    display: flex;
+    flex-flow: column;
+    border-radius: 5px;
+    position: static;
+}
+
