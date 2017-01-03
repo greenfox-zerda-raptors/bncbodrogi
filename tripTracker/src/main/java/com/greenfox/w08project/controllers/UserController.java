@@ -1,5 +1,6 @@
 package com.greenfox.w08project.controllers;
 
+import com.greenfox.w08project.domain.LoggedIn;
 import com.greenfox.w08project.domain.User;
 import com.greenfox.w08project.domain.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +21,10 @@ public class UserController {
         try {
             User user = new User(customer_name, password, year_of_birth, gender, phone_number, email_address);
             userDao.save(user);
-            model.addAttribute("name", customer_name);
-            model.addAttribute("id", String.valueOf(user.getId()));
+            LoggedIn.setId(user.getId());
+            LoggedIn.setName(customer_name);
+            model.addAttribute("name", LoggedIn.getName());
+            model.addAttribute("id", String.valueOf(LoggedIn.getId()));
         } catch (Exception ex) {
             return "Error creating new user:" + ex.toString();
         }
