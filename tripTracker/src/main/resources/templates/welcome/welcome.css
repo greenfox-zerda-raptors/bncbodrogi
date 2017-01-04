@@ -13,7 +13,7 @@ body {
 
 p {
     font-family: 'Arvo', serif;
-    color: RGBA(211, 236, 255, 1);
+    color: RGBA(0, 0, 0, 1);
     padding: 3px 0 3px 10px;
 }
 
@@ -23,8 +23,21 @@ p {
     height: 600px;
     margin: 2% auto;
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
+    align-content: space-between;
     border-radius: 5px;
     position: static;
+}
+
+.totheleft {
+    display: flex;
+}
+
+.totheright {
+    display: flex;
+}
+
+.loggedin {
+    color: RGBA(211, 236, 255, 1);
 }
 

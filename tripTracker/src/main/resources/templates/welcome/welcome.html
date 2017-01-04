@@ -10,11 +10,17 @@
     <title>TripTracker: Welcome</title>
 </head>
 <header>
-    <p th:text="'Bejelentkezve: ' + ${name} + ${id}"/>
+    <p class="loggedin" th:text="'Logged in as: ' + ${loggedInName} + ${LoggedInId}"/>
 </header>
 <body>
 <div class="wrapper">
-    <a href="/welcome">link text</a>
+    <div class="totheleft">
+        <p th:text="${tripFrom} + ' - ' + ${tripTo} + ' '  + ${tripLength} + ' km, on: '  + ${tripDate}"/>
+    </div>
+    <div class="totheright">
+        <a href="/welcome"><p th:text="'Edit'"/></a>
+        <a href="/welcome"><p th:text="'Delete'"/></a>
+    </div>
 </div>
 
 </body>
