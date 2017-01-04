@@ -15,17 +15,23 @@
 <table class="table table-striped" id="posts_list">
     <tbody>
     <tr data-th-each="post : ${posts}">
-        <td class="message" data-th-text="${post.message}"></td>
+        <td class="message" data-th-text="${post.content}"></td>
 
         <td>
-            <a th:href="@{'/posts/{id}/delete'(id=${post.id})}" class="delete" th:attr="name=${post.message}">
+            <a th:href="@{'/posts/{id}/upvote'(id=${post.id})}" class="upvote" th:attr="name=${post.content}"
+               th:text="'+'">
             </a>
         </td>
 
         <td>
-            <a th:href="@{'/posts/{id}/edit'(id=${post.id})}" class="edit" th:attr="name=${post.message}">
+            <a th:href="@{'/posts/{id}/downvote'(id=${post.id})}" class="downvote" th:attr="name=${post.content}"
+               th:text="'-'">
 
             </a>
+        </td>
+
+        <td>
+            <p th:text="${post.score}"/>
         </td>
     </tr>
     </tbody>
