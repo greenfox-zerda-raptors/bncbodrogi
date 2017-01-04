@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/templates/welcome/welcome.css}"
+          href="../templates/welcome/welcome.css"/>
+    <title>TripTracker: Welcome</title>
+</head>
+<body>
+<a href="/posts/add"><p th:text="'Add new Post'"/></a>
+<h1>Posts</h1>
+<table class="table table-striped" id="posts_list">
+    <tbody>
+    <tr data-th-each="post : ${posts}">
+        <td class="message" data-th-text="${post.message}"></td>
+
+        <td>
+            <a th:href="@{'/posts/{id}/delete'(id=${post.id})}" class="delete" th:attr="name=${post.message}">
+            </a>
+        </td>
+
+        <td>
+            <a th:href="@{'/posts/{id}/edit'(id=${post.id})}" class="edit" th:attr="name=${post.message}">
+
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
