@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/templates/listTrips/listTrips.css}"
+          href="../templates/welcome/listTrips.css"/>
+    <title>TripTracker: Welcome</title>
+</head>
+<header>
+    <p class="loggedin" th:text="'Logged in as: ' + ${loggedInName} + ${loggedInId}"/>
+</header>
+<body>
+<div class="wrapper">
+    <div class="totheleft">
+        <p th:text="${tripFrom} + ' - ' + ${tripTo} + ' '  + ${tripLength} + ' km, on: '  + ${tripDate}"/>
+    </div>
+    <div class="totheright">
+        <a href="/welcome"><p th:text="'Edit'"/></a>
+        <a href="/welcome"><p th:text="'Delete'"/></a>
+    </div>
+</div>
+
+</body>
+</html>

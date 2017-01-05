@@ -7,14 +7,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("/html/codes/html_form_handler.cfm")
+@RequestMapping("/register")
 public class UserController {
 
-    @RequestMapping("")
-    public String create(Model model, @RequestParam String customer_name, @RequestParam String password, @RequestParam int year_of_birth, @RequestParam String gender, @RequestParam String phone_number, @RequestParam String email_address) {
+    @Autowired
+    private UserDao userDao;
+
+    @RequestMapping(value = "", method = RequestMethod.GET)
+    public String createUser(Model model, @RequestParam String customer_name, @RequestParam String password, @RequestParam int year_of_birth, @RequestParam String gender, @RequestParam String phone_number, @RequestParam String email_address) {
 
         String userId = "";
 
@@ -23,14 +27,11 @@ public class UserController {
             userDao.save(user);
             LoggedIn.setId(user.getId());
             LoggedIn.setName(customer_name);
-            model.addAttribute("name", LoggedIn.getName());
-            model.addAttribute("id", String.valueOf(LoggedIn.getId()));
+            model.addAttribute("loggedInName", LoggedIn.getName().replaceAll(String.valueOf((char) 32), String.valueOf((char) 00)));
+            model.addAttribute("loggedInId", String.valueOf(LoggedIn.getId()));
         } catch (Exception ex) {
             return "Error creating new user:" + ex.toString();
         }
-        return "/welcome/welcome";
+        return "redirect:/listTrips";
     }
-
-    @Autowired
-    private UserDao userDao;
 }

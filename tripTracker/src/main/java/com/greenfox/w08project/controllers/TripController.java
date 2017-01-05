@@ -10,13 +10,16 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/welcome")
+@RequestMapping("/listTrips")
 public class TripController {
+
+    @Autowired
+    private TripDao tripDao;
 
     @RequestMapping("")
     public String createTrip(Model model) {
 
-        model.addAttribute("loggedInName", LoggedIn.getName());
+        model.addAttribute("loggedInName", LoggedIn.getLoginName());
         model.addAttribute("loggedInId", String.valueOf(LoggedIn.getId()));
 
         Trip trip = new Trip(180, "Budapest", "Gyor", "2016/02/02");
@@ -26,9 +29,6 @@ public class TripController {
         model.addAttribute("tripDate", trip.getDate());
         model.addAttribute("tripLength", trip.getLength());
 
-        return "/welcome/welcome";
+        return "/listTrips/listTrips";
     }
-
-    @Autowired
-    private TripDao tripDao;
 }

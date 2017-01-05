@@ -6,22 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <link rel="stylesheet" type="text/css" th:href="@{/templates/welcome/welcome.css}"
-          href="../templates/welcome/welcome.css"/>
+          href="../templates/newuser/newuser.css"/>
     <title>TripTracker: Welcome</title>
 </head>
-<header>
-    <p class="loggedin" th:text="'Logged in as: ' + ${loggedInName} + ${LoggedInId}"/>
-</header>
 <body>
 <div class="wrapper">
-    <div class="totheleft">
-        <p th:text="${tripFrom} + ' - ' + ${tripTo} + ' '  + ${tripLength} + ' km, on: '  + ${tripDate}"/>
-    </div>
-    <div class="totheright">
-        <a href="/welcome"><p th:text="'Edit'"/></a>
-        <a href="/welcome"><p th:text="'Delete'"/></a>
-    </div>
+    <p th:text="'Welcome you are now logged in as: ' + ${loggedInName} + ${loggedInId}"></p>
 </div>
-
 </body>
 </html>
