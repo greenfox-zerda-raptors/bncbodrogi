@@ -12,6 +12,6 @@ public class MainController {
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String landingPage(Model model) {
-        return "/landing/landing";
+        return "/login/login";
     }
 }

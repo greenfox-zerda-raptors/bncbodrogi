@@ -1,7 +1,6 @@
 package com.greenfox.w08project.controllers;
 
 
-import com.greenfox.w08project.domain.LoggedIn;
 import com.greenfox.w08project.domain.Trip;
 import com.greenfox.w08project.domain.TripDao;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +18,6 @@ public class TripController {
     @RequestMapping("")
     public String createTrip(Model model) {
 
-        model.addAttribute("loggedInName", LoggedIn.getLoginName());
-        model.addAttribute("loggedInId", String.valueOf(LoggedIn.getId()));
 
         Trip trip = new Trip(180, "Budapest", "Gyor", "2016/02/02");
 
