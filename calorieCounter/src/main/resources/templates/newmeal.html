@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
     <title>New Meal</title>
 </head>
 <body>
 <h1>you'll be able to add a new meal here</h1>
+<form method="post" name="add_new_meal" id="add_new_meal" action="/main/addmeal" role="form">
+    <label about="meal_name" th:text="'Enter meal name: '"></label>
+    <textarea rows="1" name="mealName"/>
+    <label about="meal_name" th:text="'Enter calorie value: '"></label>
+    <textarea rows="1" name="calories"/>
+    <button th:text="'Submit'" type="submit"/>
+</form>
 </body>
 </html>
