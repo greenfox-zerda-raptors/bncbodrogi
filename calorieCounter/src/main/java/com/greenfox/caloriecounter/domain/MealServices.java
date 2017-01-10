@@ -1,6 +1,5 @@
 package com.greenfox.caloriecounter.domain;
 
-import com.greenfox.caloriecounter.controllers.MealRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
@@ -15,8 +14,20 @@ public abstract class MealServices {
         repo.save(new Meal(mealName, calories));
     }
 
+    protected void deleteMeal(Long id) {
+        repo.delete(id);
+    }
+
     protected void listMeals(Model model) {
         model.addAttribute("meals", repo.findAll());
+    }
+
+    protected void sumCalories(Model model) {
+        int sumOfAllCalories = 0;
+        for (Meal meal : repo.findAll()) {
+            sumOfAllCalories += meal.getCalories();
+        }
+        model.addAttribute("sumCalories", sumOfAllCalories);
     }
 
 

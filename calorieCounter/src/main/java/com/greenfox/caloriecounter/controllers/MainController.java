@@ -3,6 +3,7 @@ package com.greenfox.caloriecounter.controllers;
 import com.greenfox.caloriecounter.domain.MealServices;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,6 +15,7 @@ public class MainController extends MealServices {
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String mainPage(Model model) {
         listMeals(model);
+        sumCalories(model);
         return "/index";
     }
 
@@ -25,6 +27,12 @@ public class MainController extends MealServices {
     @RequestMapping(value = "/addmeal", method = RequestMethod.POST)
     public String addNewMeal(@RequestParam("mealName") String mealName, @RequestParam("calories") int calories) {
         newMeal(mealName, calories);
+        return "redirect:/main";
+    }
+
+    @RequestMapping(value = "/deletemeal/{id}", method = RequestMethod.GET)
+    public String removeMeal(@PathVariable Long id) {
+        deleteMeal(id);
         return "redirect:/main";
     }
 

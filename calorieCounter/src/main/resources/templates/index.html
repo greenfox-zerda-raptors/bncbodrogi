@@ -14,9 +14,13 @@
         <td th:text="' containing: '"></td>
         <td th:text="${meal.calories}"></td>
         <td th:text="'calories'"></td>
+        <td>
+            <a th:href="'/main/deletemeal/' + ${meal.id}">Delete</a>
+        </td>
     </tr>
     </tbody>
 </table>
+<p th:text="'Total calories contributing to your already extensive bodyfat: ' + ${sumCalories}"/>
 <a th:href="@{/main/newmeal}" th:text="'Add new meal'"></a>
 </body>
 </html>
