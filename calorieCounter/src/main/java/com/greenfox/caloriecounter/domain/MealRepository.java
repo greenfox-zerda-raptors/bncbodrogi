@@ -1,6 +1,5 @@
 package com.greenfox.caloriecounter.domain;
 
-import com.greenfox.caloriecounter.domain.Meal;
 import org.springframework.data.repository.CrudRepository;
 
 

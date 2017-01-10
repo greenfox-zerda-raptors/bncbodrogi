@@ -10,7 +10,7 @@ public abstract class MealServices {
     @Autowired
     private MealRepository repo;
 
-    protected void newMeal(String mealName, int calories) {
+    protected void newMeal(String mealName, int calories, long mealTime_id) {
         repo.save(new Meal(mealName, calories));
     }
 

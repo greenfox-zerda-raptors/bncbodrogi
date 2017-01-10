@@ -26,7 +26,7 @@ public class MainController extends MealServices {
 
     @RequestMapping(value = "/addmeal", method = RequestMethod.POST)
     public String addNewMeal(@RequestParam("mealName") String mealName, @RequestParam("calories") int calories) {
-        newMeal(mealName, calories);
+        newMeal(mealName, calories, 0);
         return "redirect:/main";
     }
 
