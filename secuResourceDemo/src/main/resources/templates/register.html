@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Index</title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet"/>
+    <link href="../static/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="wrapper">
+    <h1>Register New User</h1>
+    <form method="post" name="feedback" id="feedback" th:action="@{/main/register}" role="form">
+        <label about="username" th:text="'Username:'"></label>
+        <input type="text" name="username"/>
+        <label about="password" th:text="'Password'"></label>
+        <input type="password" name="password" th:placeholder="${passwordmismatch}"/>
+        <label about="password" th:text="'Verify password'"></label>
+        <input type="password" name="verify" th:placeholder="${passwordmismatch}"/>
+        <div class="login_area">
+            <button class="login_area_buttons" th:text="'Register'" type="submit"></button>
+            <button class="login_area_buttons" th:text="'Reset'" type="reset"></button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

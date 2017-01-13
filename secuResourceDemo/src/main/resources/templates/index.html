@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Index</title>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet"/>
+    <link href="../static/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div class="logged_in_bar">
+    <p class="logged_in_bar_elements" th:text="${loggedin}"></p>
+    <a class="logged_in_bar_elements" href="/logout">logout</a>
+</div>
+<h1>Welcome</h1>
+<table class="trip_list, index_container">
+    <tbody>
+    <tr>
+        <th th:text="'Departure'"></th>
+        <th th:text="'Destination'"></th>
+        <th th:text="'Distance'"></th>
+    </tr>
+    <tr th:each="trip : ${trips}">
+        <td th:text="${trip.departure}"></td>
+        <td th:text=" ${trip.destination}"></td>
+        <td th:text="${trip.distance} + 'km'"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

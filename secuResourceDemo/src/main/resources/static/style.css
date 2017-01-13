@@ -1,0 +1,99 @@
+body {
+    background-image: url("landingbg.jpg");
+    background-size: 10 0%;
+    background-repeat: no-repeat;
+    font-family: 'Amatic SC', cursive;
+    display: flex;
+    flex-flow: column;
+}
+
+label, input, h1 {
+    display: block;
+}
+
+h1 {
+    margin: 5px auto;
+}
+
+tr {
+    text-align: left;
+}
+
+th {
+    text-decoration: underline;
+    font-size: 25px;
+}
+
+td {
+    text-align: center;
+}
+
+input {
+    margin: 5px 0;
+    border-radius: 3px;
+}
+
+button {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 2px;
+}
+
+.wrapper {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10% auto;
+    display: flex;
+    flex-flow: column;
+    background-color: RGBA(211, 236, 238, 0.7);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.index_container {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    background-color: RGBA(211, 236, 238, 0.7);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.trip_list {
+    width: 100%;
+}
+
+.login_area {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin: 10px 0 0 0;
+}
+
+.login_area_buttons {
+    border-radius: 3px;
+    border-style: outset;
+    border-color: RGBA(211, 236, 238, 0.7);
+    background-color: RGBA(211, 236, 238, 0.7);
+    text-decoration: none;
+    color: black;
+}
+
+.logged_in_bar {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    background-color: RGBA(0, 0, 0, 0.7);
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.logged_in_bar_elements {
+    margin: 0;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
